@@ -5,7 +5,7 @@ $(document).ready(function() {
 function getValueGame() {
   var circleNo = document.getElementById('circleNo').value;
   if (Math.floor(circleNo) == circleNo && $.isNumeric(circleNo) && circleNo > 0) {
-    randomizeGame(circleNo)
+    randomizeGame(circleNo);
   } else {
     $("#circleError").load("./error.html");
     $("#errorMsg").append("ERROR: Nice try! The number must be a positive integer!");
