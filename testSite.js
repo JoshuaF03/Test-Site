@@ -8,10 +8,10 @@ function getValueGame() {
     randomizeGame(circleNo)
   } else {
     $("#circleError").load("./error.html");
-    $("#errorMsg").append("ERROR: Nice try! The number must be a positive integer!)";
-    }
+    $("#errorMsg").append("ERROR: Nice try! The number must be a positive integer!");
   }
+}
 
-  function randomizeGame(value) {
-    for (i = 0; i < value;)
-  }
+function randomizeGame(value) {
+  for (i = 0; i < value;)
+}
