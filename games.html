@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Games - Josh's Site</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./testSite.js"></script>
+  </script>
+</head>
+
+<body>
+  <div id="menuBar"></div>
+  <h1>What is this page for?</h1>
+  <p>
+    This page is for games, and game related projects I might be working on, I guess.
+  </p>
+  <p>
+    This game is a basic circle game. You need to pick the correct order of the circles.
+    Enter the number of circles you would like below. The circles will turn green if you selected correctly.
+    Now, you may be thinking, "this isn't a game, this just sounds like guessing."
+    If that is what you are thinking, you would be correct. Oh, right, one more twist, this is randomized,
+    so if you guess wrong, it will be a new order. Good luck!
+  </p>
+  <div id="circleError"></div>
+  <label for="circleNo">Number of Circles:</label>
+  <label type="text" id="circleNo" name="circleNo"></label>
+  <input type="submit" value="Start Game" onClick="getValueGame()"></input>
+</body>
+
+</html>
