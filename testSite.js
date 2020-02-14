@@ -1,0 +1,1 @@
+$("#menuBar").load("./menuBar.html");
