@@ -13,5 +13,8 @@ function getValueGame() {
 }
 
 function randomizeGame(value) {
-  for (i = 0; i < value;)
+  for (i = 0; i < value; i++) {
+    var gameCircle = document.createElement("span");
+    gameCircle.setAttribute("id", "circle" + i)
+  }
 }
