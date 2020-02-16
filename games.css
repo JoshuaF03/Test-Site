@@ -1,6 +1,8 @@
-.circle {
+.gameCircle {
   height: 3em;
   width: 3em;
   border-radius: 50%;
   background-color: #B635FF;
+  display: inline-block;
+  margin-right: 4px;
 }
