@@ -8,6 +8,9 @@ $(document).ready(function() {
 
 function getValueGame() {
   circleNo = document.getElementById('circleNo').value;
+  if (document.getElementById("winText")) {
+    document.getElementById("winText").remove();
+  }
   if (Math.floor(circleNo) == circleNo && $.isNumeric(circleNo) && circleNo > 0) {
     document.getElementById("circleGame").innerHTML = "";
     circleArr = [];
@@ -54,7 +57,7 @@ function checkGame(j) {
     if (circleArr.length == 0) {
       console.log("You win!")
       winPara = document.createElement("p");
-      winText = document.createTextNode("Congratulations! You have won! Press Start Game to play again.");
+      winText = document.createTextNode("Congratulations! You have won with " + circleNo + " circles! Press Start Game to play again.");
       winPara.id = "winText";
       winPara.appendChild(winText);
       document.body.appendChild(winPara);
