@@ -53,8 +53,8 @@ function randomizeGame(a) {
 }
 
 function checkGame(j) {
-  var nextNo = circleArr.shift();
-  var actNum = nextNo++;
+  nextNo = circleArr.shift();
+  actNum = nextNo++;
   document.getElementById("circleMsg").innerHTML = "";
   if (j == nextNo) {
     document.getElementById("circle" + j).style.backgroundColor = "#178a00";
