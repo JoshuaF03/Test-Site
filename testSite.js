@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 function getValueGame() {
   circleNo = document.getElementById('circleNo').value;
+  document.getElementById("circleMsg").innerHTML = "";
   if (document.getElementById("winText")) {
     document.getElementById("winText").remove();
   }
