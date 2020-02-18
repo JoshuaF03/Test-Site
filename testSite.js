@@ -8,7 +8,6 @@ $(document).ready(function() {
 
 function getValueGame() {
   circleNo = document.getElementById('circleNo').value;
-  document.getElementById("circleMsg").innerHTML = "";
   if (document.getElementById("winText")) {
     document.getElementById("winText").remove();
   }
@@ -70,6 +69,7 @@ function checkGame(j) {
     }
   } else {
     //$("#circleMsg").load("./error.html");
+    document.getElementById("circleMsg").innerHTML = "";
     wrongGuess = document.createTextNode("Sorry, the correct circle number was " + j + "! The game has been reset for you!");
     document.getElementById("circleMsg").appendChild(wrongGuess);
     getValueGame();
