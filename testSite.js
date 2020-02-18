@@ -1,4 +1,6 @@
 var previousNo = null;
+var nextNo = null;
+var actNum = null;
 var circleNo = null;
 var circleArr = [];
 
