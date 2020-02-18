@@ -18,7 +18,7 @@ function getValueGame() {
   } else {
     $("#circleError").load("./error.html");
     nonInt = document.createTextNode("ERROR: Nice try! The number must be a positive integer!");
-    errorMsg.appendChild(nonInt);
+    document.getElementById("errorMsg").appendChild(nonInt);
   }
 }
 
