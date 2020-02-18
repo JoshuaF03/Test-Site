@@ -52,6 +52,7 @@ function randomizeGame(a) {
 
 function checkGame(j) {
   var nextNo = circleArr.shift();
+  var actNum = nextNo++;
   document.getElementById("circleMsg").innerHTML = "";
   if (j == nextNo) {
     document.getElementById("circle" + j).style.backgroundColor = "#178a00";
@@ -70,7 +71,7 @@ function checkGame(j) {
   } else {
     //$("#circleMsg").load("./error.html");
     document.getElementById("circleMsg").innerHTML = "";
-    wrongGuess = document.createTextNode("Sorry, the correct circle number was " + nextNo++ + "! The game has been reset for you!");
+    wrongGuess = document.createTextNode("Sorry, the correct circle number was " + actNum + "! The game has been reset for you!");
     document.getElementById("circleMsg").appendChild(wrongGuess);
     getValueGame();
   }
