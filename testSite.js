@@ -24,7 +24,6 @@ function getValueGame() {
 }
 
 function createGame(value) {
-  previousNo = value;
   for (let i = 0; i < value; i++) {
     gameCircle = document.createElement("div");
     gameCircle.className = 'gameCircle';
@@ -71,7 +70,7 @@ function checkGame(j) {
   } else {
     //$("#circleMsg").load("./error.html");
     document.getElementById("circleMsg").innerHTML = "";
-    wrongGuess = document.createTextNode("Sorry, the correct circle number was " + j + "! The game has been reset for you!");
+    wrongGuess = document.createTextNode("Sorry, the correct circle number was " + nextNo++ + "! The game has been reset for you!");
     document.getElementById("circleMsg").appendChild(wrongGuess);
     getValueGame();
   }
