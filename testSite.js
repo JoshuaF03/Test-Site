@@ -18,7 +18,7 @@ function getValueGame() {
   } else {
     $("#circleError").load("./error.html");
     nonInt = document.createTextNode("ERROR: Nice try! The number must be a positive integer!");
-    circleError.appendChild(nonInt);
+    errorMsg.appendChild(nonInt);
   }
 }
 
@@ -55,12 +55,11 @@ function checkGame(j) {
   if (j == nextNo) {
     document.getElementById("circle" + j).style.backgroundColor = "#178a00";
     if (circleArr.length == 0) {
-      console.log("You win!")
-      winPara = document.createElement("p");
+      $("#circleError").load("./error.html");
+      console.log("You win!");
       winText = document.createTextNode("Congratulations! You have won with " + circleNo + " circles! Press Start Game to play again.");
-      winPara.id = "winText";
-      winPara.appendChild(winText);
-      document.body.appendChild(winPara);
+      winText.id = "winText";
+      document.getElementById("errorMsg").appendChild(winText);
       /*for (i = 0; i < circleNo; i++) {
         document.getElementById("circle" + i).onclick = function() {
           return false;
@@ -68,7 +67,9 @@ function checkGame(j) {
       }*/
     }
   } else {
-    console.log(j);
+    $("#circleError").load("./error.html");
+    wrongGuess = document.createTextNode("Sorry, the correct circle number was " + j + "! The game has been reset for you!");
+    document.getElementById("errorMsg").appendChild(wrongGuess);
     getValueGame();
   }
 }
