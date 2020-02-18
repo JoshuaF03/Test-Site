@@ -1,6 +1,4 @@
 var previousNo = null;
-var nextNo = null;
-var actNum = null;
 var circleNo = null;
 var circleArr = [];
 
@@ -53,8 +51,8 @@ function randomizeGame(a) {
 }
 
 function checkGame(j) {
-  nextNo = circleArr.shift();
-  actNum = nextNo++;
+  var nextNo = circleArr.shift();
+  var actNum = nextNo++;
   document.getElementById("circleMsg").innerHTML = "";
   if (j == nextNo) {
     document.getElementById("circle" + j).style.backgroundColor = "#178a00";
